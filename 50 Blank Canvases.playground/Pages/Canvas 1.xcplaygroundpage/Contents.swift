@@ -2,48 +2,41 @@
 //: # A Blank Canvas
 //:
 //: Use this page to experiment. Have fun!
-/*:
- ## Required code
- 
- The following statements are required to make the playground run.
- 
- Please do not remove.
- */
+//
+
 import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+//Change linepercolumn and lineperrow as needed. These numbers must be smaller than the canvas width and height. For square lines, use numbers that multiply directly into the canvas width/height.
 
+var linepercolumn = 25
+var lineperrow = 25
+var l = canvas.width/lineperrow
+var h = canvas.height/linepercolumn
 
+for _ in 1...linepercolumn
+{
+    for _ in 1...lineperrow
+    {
+        let i = random(from: 1, toButNotIncluding: 3)
+        if i == 1
+        {
+            canvas.drawLine(fromX: 0, fromY: 0, toX:l, toY: h)
+            
+        }
+        else
+        {
+            canvas.drawLine(fromX: 0, fromY: h, toX: l, toY: 0)
+            
+        }
+        canvas.translate(byX: l, byY: 0)
+    }
+    canvas.translate(byX: -canvas.width, byY: h)
+}
 
-/*:
- ## Use source control
- To keep your work organized, and receive feedback, source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source_control.png "Source Control")
- */
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right.
- 
- Please do not remove.
- 
- If you don't see output, remember to show the Assistant Editor, and switch to Live View:
- 
- ![timeline](timeline.png "Timeline")
- */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
 
