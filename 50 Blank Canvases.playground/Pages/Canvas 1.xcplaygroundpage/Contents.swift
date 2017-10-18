@@ -2,7 +2,7 @@
 //: # A Blank Canvas
 //:
 //: Use this page to experiment. Have fun!
-//
+//Line Generator
 
 import Cocoa
 import PlaygroundSupport
@@ -12,8 +12,8 @@ let canvas = Canvas(width: 500, height: 500)
 
 //Change linepercolumn and lineperrow as needed. These numbers must be smaller than the canvas width and height. For square lines, use numbers that multiply directly into the canvas width/height.
 
-var linepercolumn = 25
-var lineperrow = 25
+var linepercolumn = 50
+var lineperrow = 50
 var l = canvas.width/lineperrow
 var h = canvas.height/linepercolumn
 

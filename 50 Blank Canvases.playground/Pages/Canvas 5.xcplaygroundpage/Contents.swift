@@ -2,47 +2,58 @@
 //: # A Blank Canvas
 //:
 //: Use this page to experiment. Have fun!
-/*:
- ## Required code
- 
- The following statements are required to make the playground run.
- 
- Please do not remove.
- */
 import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+canvas.drawShapesWithFill = true
+canvas.drawShapesWithBorders = false
 
 
+let hue = random(from: 0, toButNotIncluding: 361)
+let largehue = hue+20
+let smallhue = hue-20
+if hue <= smallhue, hue >= largehue
+{
+    canvas.fillColor = Color(hue: hue, saturation: 100, brightness: 100, alpha: 100)
+}
+else
+{
+    //restart loop
+}
 
-/*:
- ## Use source control
- To keep your work organized, and receive feedback, source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source_control.png "Source Control")
- */
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right.
- 
- Please do not remove.
- 
- If you don't see output, remember to show the Assistant Editor, and switch to Live View:
- 
- ![timeline](timeline.png "Timeline")
- */
+//generate number until out of range
+//set color
+
+//generate number
+//check colour
+//if it failed the check, generate again
+//else set colour
+
+
+for x in stride(from: 50, to: 500, by: 100)
+{
+    for y in stride(from: 50, to: 500, by: 100)
+    {
+        for z in stride(from: 100, to: 0, by: -20)
+        {
+            let hue = random(from: 0, toButNotIncluding: 361)
+            let largehue = hue+20
+            let smallhue = hue-20
+            if hue >= smallhue && hue <= largehue
+            {
+                //let hue = random(from: 0, toButNotIncluding: 361)
+            }
+            canvas.fillColor = Color(hue: hue, saturation: 100, brightness: 100, alpha: 100)
+            canvas.drawEllipse(centreX: x, centreY: y, width: z, height: z)
+        }
+    }
+}
+
+
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
+
+
