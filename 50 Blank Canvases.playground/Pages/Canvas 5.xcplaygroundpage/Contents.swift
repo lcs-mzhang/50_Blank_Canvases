@@ -15,7 +15,7 @@ canvas.drawShapesWithBorders = false
 let hue = random(from: 0, toButNotIncluding: 361)
 let largehue = hue+20
 let smallhue = hue-20
-if hue <= smallhue, hue >= largehue
+if hue <= smallhue || hue >= largehue
 {
     canvas.fillColor = Color(hue: hue, saturation: 100, brightness: 100, alpha: 100)
 }

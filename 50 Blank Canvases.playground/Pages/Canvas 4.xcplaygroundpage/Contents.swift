@@ -39,7 +39,7 @@ for x in stride(from: 50, to: 500, by: 100)
             let smallhue = hue-20
             if hue >= smallhue && hue <= largehue
             {
-               let hue = random(from: 0, toButNotIncluding: 361)
+                _ = random(from: 0, toButNotIncluding: 361)
             }
             canvas.fillColor = Color(hue: hue, saturation: 100, brightness: 100, alpha: 100)
             canvas.drawEllipse(centreX: x, centreY: y, width: z, height: z)
