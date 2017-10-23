@@ -10,10 +10,9 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
-//Change linepercolumn and lineperrow as needed. These numbers must be smaller than the canvas width and height. For square lines, use numbers that multiply directly into the canvas width/height.
 
-var linepercolumn = 50
-var lineperrow = 50
+let linepercolumn = 25
+let lineperrow = 25
 var l = canvas.width/lineperrow
 var h = canvas.height/linepercolumn
 
