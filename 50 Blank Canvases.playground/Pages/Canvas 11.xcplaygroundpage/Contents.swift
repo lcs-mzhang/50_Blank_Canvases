@@ -17,7 +17,7 @@ let canvas = Canvas(width: 500, height: 500)
 
 for _ in 1...canvas.height/50
 {
-let rando = random(from: 0, toButNotIncluding: 2)
+let rando = random(from: 0, toButNotIncluding: 3)
 if rando == 1
 {
     let text = "da herro"
