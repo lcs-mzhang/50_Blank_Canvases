@@ -13,8 +13,23 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
+for _ in 1...canvas.height/50
+{
+let rando = random(from: 0, toButNotIncluding: 2)
+if rando == 1
+{
+    let text = "da herro"
+    canvas.drawText(message: text, size: 50, x: 0, y: 0)
+}
+else
+{
+    let text = "ching chong"
+    canvas.drawText(message: text, size: 50, x: 0, y: 0)
+}
+canvas.translate(byX: 0, byY: 50)
+}
 /*:
  ## Add your code below
  
@@ -26,24 +41,6 @@ let canvas = Canvas(width: 400, height: 300)
 
 
 
-/*:
- ## Use source control
- To keep your work organized, and receive feedback, source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source_control.png "Source Control")
- */
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right.
- 
- Please do not remove.
- 
- If you don't see output, remember to show the Assistant Editor, and switch to Live View:
- 
- ![timeline](timeline.png "Timeline")
- */
-// Don't remove the code below
+
 PlaygroundPage.current.liveView = canvas.imageView
 

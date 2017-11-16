@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 //draw triange w/ metaphor
 
@@ -26,6 +26,7 @@ canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0, lineWidth: 10)
 canvas.translate(byX: 200, byY: 0)
 canvas.rotate(by: 120)
 }
+
 
 
 /*:
