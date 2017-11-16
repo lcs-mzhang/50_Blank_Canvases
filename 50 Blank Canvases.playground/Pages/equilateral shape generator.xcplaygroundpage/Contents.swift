@@ -16,20 +16,39 @@ import PlaygroundSupport
 let canvas = Canvas(width: 500, height: 500)
 
 
-var numberside = 12
-var linelength = 25
+//var numberside = 10
+//var linelength = 25
+//
+//
+//canvas.translate(byX: canvas.width/2, byY: canvas.height/2)
+//for _ in 1...numberside
+//{
+//    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
+//    canvas.translate(byX: linelength, byY: 0)
+//    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
+//    canvas.translate(byX: linelength, byY: 0)
+//    canvas.rotate(by: Degrees(360/numberside))
+//}
 
+let numberSide = 5
+let lineLength = 25
+let sideDegrees = Int((numberSide-2) * 180)
 
-canvas.translate(byX: canvas.width/2, byY: canvas.height/2)
-for _ in 1...numberside
+canvas.translate(byX: 250, byY: 250)
+
+for _ in 1...numberSide
 {
-    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
-    canvas.translate(byX: linelength, byY: 0)
-    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
-    canvas.translate(byX: linelength, byY: 0)
-    canvas.rotate(by: Degrees(360/numberside))
+    canvas.drawLine(fromX: 0, fromY: 0, toX: lineLength, toY: 0)
+    canvas.translate(byX: lineLength, byY: 0)
+    canvas.rotate(by: CGFloat(180-sideDegrees/numberSide))
 }
 
+
+//for _ in 1...sides {
+//    canvas.drawLine(fromX: 0, fromY: 0, toX: 750/sides, toY: 0)
+//    canvas.translate(byX: 750/sides, byY: 0)
+//    canvas.rotate(by: CGFloat(180-sideDegrees/sides))
+//}
 /*:
  ## Add your code below
  
