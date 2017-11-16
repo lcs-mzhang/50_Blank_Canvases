@@ -17,18 +17,19 @@ let canvas = Canvas(width: 500, height: 500)
 
 
 var numberside = 12
-var linelength = 50
+var linelength = 25
 
 
 canvas.translate(byX: canvas.width/2, byY: canvas.height/2)
 for _ in 1...numberside
 {
-    canvas.drawLine(fromX: 0, fromY: 0, toX: 50, toY: 0)
-    canvas.translate(byX: 50, byY: 0)
+    canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
+    canvas.translate(byX: linelength, byY: 0)
     canvas.drawLine(fromX: 0, fromY: 0, toX: linelength, toY: 0)
     canvas.translate(byX: linelength, byY: 0)
     canvas.rotate(by: Degrees(360/numberside))
 }
+
 /*:
  ## Add your code below
  
