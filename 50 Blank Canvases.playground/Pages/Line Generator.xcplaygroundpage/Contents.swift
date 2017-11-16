@@ -11,6 +11,7 @@ import PlaygroundSupport
 let canvas = Canvas(width: 500, height: 500)
 
 
+
 let linepercolumn = 25
 let lineperrow = 25
 var l = canvas.width/lineperrow

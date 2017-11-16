@@ -1,7 +1,7 @@
 //: [Previous](@previous) / [Next](@next)
 //: # A Blank Canvas
 //:
-//: Use this page to experiment. Have fun!
+//: Abstrations with Functions
 /*:
  ## Required code
  
@@ -15,15 +15,17 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 300)
 
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+//draw triange w/ metaphor
 
+canvas.translate(byX: 75, byY: 100)
+
+//draw da side and do da rotation one
+for _ in 1...3
+{
+canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0, lineWidth: 10)
+canvas.translate(byX: 200, byY: 0)
+canvas.rotate(by: 120)
+}
 
 
 /*:
