@@ -29,7 +29,7 @@ struct Slope
 }
 
 var point1 = Point(x: 60, y: 15)
-var slope1 = Slope(rise: -10, run: 20, yInt: 190/2)
+var slope1 = Slope(rise: -10, run: 20, yInt: 95)
 
 func Solve(between lineWithSlope: Slope, Position: Point) -> Double
 {
@@ -43,7 +43,10 @@ func Solve(between lineWithSlope: Slope, Position: Point) -> Double
     let xInt = -(otherB/otherM)
     
     
-    let poiX = (otherM * Position.x + otherB - b)/m
+//    let poiX = (otherM * Position.x + otherB - b)/m
+//    let poiY = otherM * poiX + otherB
+    
+    let poiX = (b-otherB)/(otherM-m)
     let poiY = otherM * poiX + otherB
     
     canvas.translate(byX: 250, byY: 250)
