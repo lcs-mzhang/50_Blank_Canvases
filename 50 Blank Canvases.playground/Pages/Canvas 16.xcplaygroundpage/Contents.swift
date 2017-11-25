@@ -2,48 +2,30 @@
 //: # A Blank Canvas
 //:
 //: Use this page to experiment. Have fun!
-/*:
- ## Required code
- 
- The following statements are required to make the playground run.
- 
- Please do not remove.
- */
 import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
-
-/*:
- ## Add your code below
- 
- Be sure to write human-readable code.
- 
- Use whitespace and comments as appropriate.
- */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+let canvas = Canvas(width: 500, height: 200)
 
 
+func askQuestion(question:String)
+{
+    canvas.drawText(message: question, size: 50, x: 0, y: 150)
+    let rando = random(from: 1, toButNotIncluding: 3)
+    if rando == 1
+    {
+        canvas.drawText(message: "ask 3 before u ask me", size: 50, x: 0, y: 0)
+    }
+    else
+    {
+        canvas.drawText(message: "come to grove time", size: 50, x: 0, y: 0)
+    }
+    
+}
 
-/*:
- ## Use source control
- To keep your work organized, and receive feedback, source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source_control.png "Source Control")
- */
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right.
- 
- Please do not remove.
- 
- If you don't see output, remember to show the Assistant Editor, and switch to Live View:
- 
- ![timeline](timeline.png "Timeline")
- */
-// Don't remove the code below
+askQuestion(question: "how are u doing?")
+
+
 PlaygroundPage.current.liveView = canvas.imageView
 
